@@ -58,8 +58,8 @@ Use these exact values:
 | **Name** | `ai-dress-booth` (or any name you like) |
 | **Region** | Choose closest to you |
 | **Runtime** | **Node** |
-| **Build Command** | `npm install && npm run build` |
-| **Start Command** | `node server.js` |
+| **Build Command** | **Must be** `npm install && npm run build` (so dependencies install before build) |
+| **Start Command** | `npm run start` or `node server.js` |
 | **Instance Type** | **Free** (or paid if you prefer) |
 
 Leave **Root Directory** blank unless the app is in a subfolder of the repo.
