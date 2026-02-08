@@ -110,6 +110,18 @@ Open that URL in your browser. You should see the app; the same URL serves both 
 
 ## Troubleshooting
 
+### Build failed? Paste your Render build log
+
+In Render: your service → **Logs** (or the failed deploy) → copy the **full build output** and share the error lines. Meanwhile try:
+
+| Error / symptom | What to do |
+|-----------------|------------|
+| **cross-env: not found** | Use latest package.json (build script is `react-scripts build`). Push and redeploy. |
+| **npm ERR! or missing module** | Set **Build Command** to: `npm install && npm run build` |
+| **JavaScript heap out of memory** | Add env **NODE_OPTIONS** = **--max-old-space-size=460**. Then Manual Deploy → Clear build cache and deploy. |
+| **ESLint** fails the build | Add env **CI** = **false** |
+| **REACT_APP_...** missing | Add all required env vars; they are used at build time. |
+
 | Issue | What to do |
 |--------|-------------|
 | Build fails on “REACT_APP_…” | Add all required env vars in **Environment** and redeploy. They must exist at **build** time. |
