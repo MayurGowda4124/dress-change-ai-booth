@@ -1,0 +1,13 @@
+# Render Blueprint: single web service (frontend + backend on one URL)
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: ai-dress-booth
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Add in Render Dashboard: REACT_APP_FITROOM_API_KEY, REACT_APP_SUPABASE_URL, REACT_APP_SUPABASE_ANON_KEY
+      # Optional: REACT_APP_API_URL left unset so app uses same origin (your Render URL)

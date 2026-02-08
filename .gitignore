@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+build/
+release/
+
+# Electron
+dist/
+*.asar
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs and cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.cache/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Optional: local uploads/results (uncomment if you don't want to commit them)
+# public/Images_input/
+# public/result_s/
