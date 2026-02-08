@@ -76,6 +76,7 @@ Before the first deploy, add these so the React build and app work correctly.
 | Key | Value | Required |
 |-----|--------|----------|
 | `NODE_ENV` | `production` | Yes |
+| `NODE_OPTIONS` | `--no-deprecation` | Recommended (avoids Node/OpenSSL warnings during build) |
 | `REACT_APP_FITROOM_API_KEY` | Your FitRoom API key | Yes |
 | `REACT_APP_SUPABASE_URL` | `https://xxxx.supabase.co` | Yes |
 | `REACT_APP_SUPABASE_ANON_KEY` | Your Supabase anon key | Yes |
