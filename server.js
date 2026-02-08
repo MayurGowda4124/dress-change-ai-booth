@@ -10,8 +10,9 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
+// Serve build first so / returns the built React app (build/index.html), not the template (public/index.html)
 app.use(express.static('build'));
+app.use(express.static('public'));
 
 // Create upload directory if it doesn't exist
 const uploadDir = path.join(__dirname, 'public', 'Images_input');
